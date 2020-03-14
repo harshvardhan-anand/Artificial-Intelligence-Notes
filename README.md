@@ -1,1 +1,1 @@
-# Artificial Intelligence
+# Learning Artificial Intelligence
