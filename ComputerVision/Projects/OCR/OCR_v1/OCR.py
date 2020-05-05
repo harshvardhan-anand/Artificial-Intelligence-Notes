@@ -19,8 +19,8 @@ class ocr():
     def __init__(self,
                  path=input("Enter the path of image: "),
 #                  path='morg.jpg',
-                 full_img=True,
-                 selected_img=False,
+                 full_img=False,
+                 selected_img=True,
                  saveText=True,
                  printText=True,
                  showRaw=False,
@@ -75,9 +75,9 @@ class ocr():
                     file.write(self._text)
                 except:
                     file.write(text)
-                    
-                
-                
+
+
+
     def _textProcessing(self, text):
         # this is not a efficient method.
         temp = text.split()
@@ -100,7 +100,7 @@ class ocr():
 
 
 o = ocr()
-time.sleep(10)
+time.sleep(999)
 
 # In[ ]:
 
