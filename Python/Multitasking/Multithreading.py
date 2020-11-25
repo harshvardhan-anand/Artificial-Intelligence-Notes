@@ -1,25 +1,24 @@
 import threading as t
 import time
+class f1(t.Thread):
+    def run(self):
+        time.sleep(0)
+        for _ in range(5):
+            print(1)
 
-def funk1(arg):
-    # time.sleep(1)
-    for i in range(arg):
-        print(arg, end='   ')
+class f2(t.Thread):
+    def run(self):
+        time.sleep(0)
+        for _ in range(5):
+            print(2)
 
-def funk2(arg):
-    time.sleep(3)
-    for i in range(arg):
-        print(arg, end='    ')
-
-print(1)
-t1 = t.Thread(target=funk1, args=(10,))
-t2 = t.Thread(target=funk2, args=(20,))
+t1 = f1()
+t2 = f2()
 
 t1.start()
 t2.start()
 
 t1.join()
-print('2sadasda')
 t2.join()
 
 print('Executed')
